@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <title>Visibility example</title>
+        <style>
+            p
+            {
+                color:darkmagenta;
+            }
+
+            span
+            {
+                color:red;
+            }
+        </style>
+    </head>
+    <body>
+        <p>hello world [[   <span>Not hiddden,testing words</span>   ]] 
+        &nbsp; // no styling  </p>
+        <p>hello world [[   <span style="visibility: hidden;">testing words</span>  ]] 
+        &nbsp; // visibility hidden</p>
+        <p> hello world [[  <span style="display: none;">testing words</span>  ]] 
+        &nbsp; //display none </p>
+    </body>
+</html>

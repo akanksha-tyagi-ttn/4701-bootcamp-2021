@@ -1,0 +1,169 @@
+/* Add a black background color to the top navigation */
+.topnav {
+    overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  color:cadetblue;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #fff;
+  color: black;
+}
+
+
+/* Right-aligned section inside the top navigation */
+.topnav-right {
+  float: right;
+}
+
+.container
+{
+    position: relative;
+    width: 100%;
+    aspect-ratio: 100 / 29;
+}
+.form-data
+{
+    border:1px solid;
+  border-radius: 15px;
+  width:440px;
+  position: absolute;
+  margin-left:200px;
+}
+
+
+.head-form-container
+{
+    display:flex;
+    clear:both;
+    border-radius:15px 15px 0 0;
+    color:#fff;
+    background-color: lightgray; 
+    padding:0 10px 10px 10px;
+}
+
+.form-container
+{
+    border-radius:0 0 10px 10px;
+    display:block;
+    padding-top:5px;
+}
+
+label{
+    margin-left:15px;
+    font-size: 18px;;
+}
+.input-regular
+{
+    width:90%;
+    margin-left:20px;
+    margin-right:10px;
+    border-radius: 5px;
+    padding:10px;
+    margin-top:10px;
+    margin-bottom: 10px;
+    font-size:15px;
+}
+
+.input-small
+{
+    width:30%;
+    padding:10px;
+    padding:10px;
+    margin-top:10px;
+    margin-left:20px;
+    border-radius: 10px;;
+}
+textarea
+{   width:90%;
+    margin-left:20px;
+    margin-right:10px;
+    height:80px;
+    border-radius: 10px;
+    margin-top:10px;
+    margin-bottom: 10px;}
+
+.select-style
+{
+    margin-top:10px;
+    margin-bottom: 10px;
+    background-color: MediumSeaGreen;
+    width:90%;
+    margin-left:20px;
+    margin-right:10px;
+    height:40px;
+    border-radius: 10px;
+    padding:10px;
+    padding-right:18px;
+    color:white;
+    font-size: 15px;
+}
+
+
+input [type=radio]
+{
+    padding:10px;
+    margin-bottom: 10px;;
+}
+
+.upload-border
+{
+    padding-top:10px;
+    padding-bottom:10px;
+    border:1px solid;
+    border-radius: 10px;;
+    margin-top:10px;
+    width:90%;
+    margin-left:20px;
+    margin-right:10px;
+    font-size:15px;
+}
+
+.submit-button-div
+{
+    background-color:lightgray;
+    height:60px;
+    border-radius: 0 0 10px 10px;
+    padding-top:15px;
+}
+
+.btn
+{
+  background-color: MediumSeaGreen;
+  border: none;
+  color: white;
+  padding: 12px 12px;
+  margin-right:10px;
+  margin-bottom: 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius:10px;
+  float: right;
+}
+/*
+input[type="file"]{
+    -webkit-appearance: none;
+    text-align: left;
+    -webkit-rtl-ordering:  left;
+ }
+ input[type="file"]::-webkit-file-upload-button{
+    -webkit-appearance: none;
+    float: right;
+    margin: 0 0 0 10px;
+    border: 1px solid #aaaaaa;
+    border-radius: 4px;
+    background-image: -webkit-gradient(linear, left bottom, left top, from(#d2d0d0), to(#f0f0f0));
+    background-image: -moz-linear-gradient(90deg, #d2d0d0 0%, #f0f0f0 100%);
+ }
+  */

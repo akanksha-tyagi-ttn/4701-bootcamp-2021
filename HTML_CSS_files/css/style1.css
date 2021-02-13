@@ -1,0 +1,130 @@
+body{
+    background-color:#282828;
+}
+.header-class
+{
+    color: #fff;
+    height: 20px;
+    width: 960px;
+    margin-left: 188px;
+    margin-right:110px;
+    margin-bottom: 20px;
+    font-size: 25px;
+    display: flex;
+    justify-content: left;
+}
+.nav-link /*nav bar container*/
+{
+    background-color: #000;
+    margin: 0 178px 0 185px;
+}
+ul { /* whole list*/
+    list-style-type: none;
+    margin: auto;
+    padding: 10px;
+    height: 20px;
+  }
+  
+  li { /* list item */
+    display: inline;
+    padding: 10px;
+  }
+  li a
+  { /* list item link */
+      text-decoration: none !important;
+      color:honeydew;
+      text-transform: uppercase;
+  }
+
+  /* flex container */
+.flex-container
+{
+    display: flex;
+    justify-content:center;
+    border:1px solid	#282828;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 20px;;
+    background-color: white;
+    padding-top:20px;
+    padding-bottom: 600px;
+    position: relative;
+    align-items: center;
+}
+.container-1
+{
+    width:960px;
+    height:360px;
+    background-color: 	#282828;
+    text-align: center; 
+    color:#fff;
+    font-size:large
+}
+.para
+{
+    position: absolute;
+    bottom: 480px;
+    width:960px;
+    background-color:lightskyblue;
+    height:70px;
+
+}
+
+.heading-b
+{
+    position: absolute;
+    bottom: 430px;
+    width:960px;
+    text-transform: uppercase;
+    height:30px;
+}
+
+/* gallery container*/
+
+.gallary-containers
+{
+    position:absolute;
+    display:flex;
+    /* flex-wrap: wrap; */
+    text-align: center;
+    margin-top: 1100px;
+    border:1px solid;
+    width:960px;
+    padding-left:10px;
+    padding-bottom: 50px;
+}
+.gallary-containers .child-flex
+{
+  background-color: 	#282828;
+  width: 215px;
+  height:315px;
+  margin:10px;
+  text-align: center;
+  line-height: 75px;
+  font-size: 30px;
+  border: 1px;
+  color:#fff;
+}
+
+.picture-caption
+{
+  background-color:darkslategrey;
+  width: 215px;
+  height:0px;
+  margin-top:230px;
+  font-size: smaller;
+  color:black;
+}
+
+/* footer copyright*/
+.footer-style
+{ 
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    justify-content: left;
+    margin-left: 50px;
+    margin-right:50px;
+    padding-left:150px;
+    height: 30px;
+}

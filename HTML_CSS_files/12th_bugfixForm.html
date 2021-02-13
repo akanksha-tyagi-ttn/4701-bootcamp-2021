@@ -1,0 +1,79 @@
+<html>
+    <head>
+        <title>
+        </title>
+        <link rel="stylesheet" href=css/bugStyle.css>
+    </head>
+    <body>
+        <div class="topnav">
+            <a class="active" href="#home">TO THE NEW</a>
+            <div class="topnav-right">
+              <a href="#home">Home</a>
+              <a href="#Quick Help">Quick Help</a>
+            </div>
+        </div> <!-- top nav-->
+        <br>
+
+        <div class="container">
+            <div class="form-data">
+                    <div class="head-form-container">
+                      <h2>Bug Report</h2>
+                    </div>
+                <form action="" class="form-container">
+                        <label for="title">Title:*</label><br>
+                        <input class="input-regular" type="text" name="">
+                        
+                        <label for="">Description: *</label> <br>
+                        <textarea name="descr"></textarea>
+
+                    <label for="OS">Operating System: *</label><br>
+                    <select class="select-style">
+                        <option value="-1">Select</option>
+                        <option value="linux">Linux</option>
+                        <option value="window">Windows OS</option>
+                        <option value="macos">Mac OS</option>
+                    </select>
+
+                    <label for="product">Product: *</label><br>
+                    <select class="select-style">
+                        <option value="-1">Select</option>
+                        <option value="Formoid">Formoid</option>
+                        <option value="a">something a</option>
+                        <option value="b">something b</option>
+                    </select>
+
+                    <label for="version">Version: *</label> <br>
+                    <input type=text class="input-small"> 
+                    <br>
+                    <br>
+                    <label for="licence">Licence</label> <br>
+                    <input type="radio" id="Free" name="l_id" value="Free">
+                    <label for="frr">Free</label> &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;
+                    &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;
+                    &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; 
+                    &nbsp;&nbsp; &nbsp; &nbsp;&nbsp;
+                    <input type="radio" id="Business" name="l_id" value="Business">
+                    <label for="Business">Business</label><br> <br>
+
+                    <label for="severity">Severity: </label><br>
+                    <select class="select-style">
+                        <option value="-1">Select</option>
+                        <option value="critical">Critical</option>
+                        <option value="manageable">somewhat manageable</option>
+                        <option value="third">third opt</option>
+                    </select>
+                    <br>
+
+                    <div class="input-group upload-border">
+                        <input type="file">
+                    </div>
+                    <br>
+                    <div class="submit-button-div">
+                        <button class="btn" type=submit>Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    </body>
+</html>
