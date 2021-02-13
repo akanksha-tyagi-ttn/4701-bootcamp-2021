@@ -1,0 +1,22 @@
+[
+    {
+        "name":"akanksha tyagi",
+        "age":24,
+        "phone":452369
+    },
+    {
+        "name":"tanya tyagi",
+        "age":22,
+        "phone":365478
+    },
+    {
+        "name":"mudit tyagi",
+        "age":18,
+        "phone":374125
+    },
+    {
+        "name":"sapna tyagi",
+        "age":38,
+        "phone":665478
+    }
+]
