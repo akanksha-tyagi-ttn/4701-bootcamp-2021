@@ -1,2 +1,2 @@
 # akankshatyagi-practise
-master branch
+JQuery assignment
