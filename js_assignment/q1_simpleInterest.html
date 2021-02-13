@@ -1,0 +1,27 @@
+<html>
+    <head>
+	<title>Simple Interest Calculation</title>
+    <link rel="stylesheet" href=css/style.css>
+    <style>
+        
+    </style>
+    </head>
+
+    <body>
+        <h1>Simple Interest Calculation</h1>
+        <div class="submit-button-div">
+            <button class="btn" onclick="calculate()">Click to check Simple Interest !!</button>
+        </div>
+
+        <script>
+            function calculate()
+            {
+                var principle=window.prompt("Enter the principle");
+                var rate=window.prompt("Enter the rate");
+                var year=window.prompt("Enter the years");
+                var result= (principle*rate*year )/100;
+                window.confirm("The result is ::  ₹  "+ result);
+            }
+        </script>
+    </body>
+</html>

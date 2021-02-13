@@ -1,0 +1,39 @@
+<html>
+    <head>
+	<title>palindrome</title>
+    <link rel="stylesheet" href=css/style.css>
+    </head>
+    <body>
+        <h1> String Palindrome </h1>
+        <div class="submit-button-div">
+            <button class="btn" onclick="checkpalindrome()"> Check the String for palindrome!</button>
+        </div>   <p id="result"></p>
+        <script>
+            function checkpalindrome()
+            {
+                var str=window.prompt("Enter the String for palindrome: ");
+                const len = str.length; var flag=0;
+
+                for (let i = 0; i < len / 2; i++) {
+
+                    if (str[i] !== str[len - 1 - i]) {
+                        flag=1;
+                        console.log(str[i]);
+                         break;
+                    }
+                }
+                if(flag==0)
+                {
+                    window.confirm("Yes, This string is Palindrome!!");
+                    document.getElementById("result").innerHTML="Yes, This string is Palindrome!!";
+                }
+                else
+                {
+                    window.confirm("NO, This string is NOT a Palindrome!!");
+                    document.getElementById("result").innerHTML="NO, This string is NOT a Palindrome!!";
+                }
+                
+            }
+        </script>
+    </body>
+</html>

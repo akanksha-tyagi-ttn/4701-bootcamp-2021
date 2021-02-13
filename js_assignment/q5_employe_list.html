@@ -1,0 +1,106 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="css/style.css">
+        <title>Employee</title>
+    </head>
+    <body>
+        <h1> Employee  Question</h1>
+        <div class="submit-button-div">
+            <button class="btn" onclick="employeeFilter()"> employee List..</button>
+            <button class="btn" onclick="employeeGroup()">employee Group..</button>
+            <button class="btn" onclick="employeeIncrement()">employee increement..</button>
+        </div>
+            <p id="result1"></p>
+            <p id="result2"></p>
+        </div>
+        <script>
+            function employeeFilter()
+            {
+                var Employee=[ 
+                    { Name: "Ramesh", age:30, salary:5000,DOB:'1989-04-21'},
+                    {Name: "Suresh", age:42, salary:8000,DOB:'1977-11-06'},
+                    {Name: "Pooja", age:28, salary:2000,DOB:'1993-06-14'},
+                    {Name: "Mudit", age:33, salary:6500,DOB:'1989-01-30'},
+                    {Name: "Sushma", age:35, salary:6500,DOB:'1989-01-30'},
+                    {Name: "Anand", age:25, salary:900,DOB:'1996-10-05'},
+                    {Name: "Parmeet", age:50, salary:6500,DOB:'1989-12-12'}
+                ]
+                console.log(Employee);
+                
+                document.getElementById("result1").innerHTML=Employee.length.toString()+
+                " employees are there in the list. "+"<br>check console for the employee list";
+
+                var emp_filter=Employee.filter(emp=> emp.salary>5000);
+                console.log(emp_filter);
+
+                document.getElementById("result2").innerHTML=emp_filter.length.toString()+
+                " employess are filtered out. "+"<br>check console for the employee list";
+                
+            }
+
+            function employeeGroup()
+            {
+                var Employee=[ 
+                    { Name: "Ramesh", age:30, salary:5000,DOB:'1989-04-21'},
+                    {Name: "Suresh", age:42, salary:8000,DOB:'1977-11-06'},
+                    {Name: "Pooja", age:28, salary:2000,DOB:'1993-06-14'},
+                    {Name: "Mudit", age:33, salary:6500,DOB:'1989-01-30'},
+                    {Name: "Sushma", age:35, salary:6500,DOB:'1989-01-30'},
+                    {Name: "Anand", age:25, salary:900,DOB:'1996-10-05'},
+                    {Name: "Parmeet", age:50, salary:6500,DOB:'1989-12-12'}
+                ]
+                console.log(Employee);
+                
+                document.getElementById("result1").innerHTML=Employee.length.toString()+
+                " employees are there in the list. "+"<br>check console for the employee list";
+
+                var emp_groupby=Employee.map(emp=>
+                {
+                    if(emp.age>=20 && emp.age<30)
+                        {return "Trainee";}
+                    if (emp.age>=30 && emp.age<40)
+                        {return "professional-1";}
+                    if(emp.age>=40)
+                    return "professional-2/Expertise";
+                });
+                console.log(emp_groupby);
+                }
+
+
+            function employeeIncrement()
+            {
+                var Employee=[ 
+                    { Name: "Ramesh", age:30, salary:5000,DOB:'1989-04-21'},
+                    {Name: "Suresh", age:42, salary:8000,DOB:'1977-11-06'},
+                    {Name: "Pooja", age:28, salary:2000,DOB:'1993-06-14'},
+                    {Name: "Mudit", age:33, salary:6500,DOB:'1989-01-30'},
+                    {Name: "Sushma", age:35, salary:6500,DOB:'1989-01-30'},
+                    {Name: "Anand", age:25, salary:900,DOB:'1996-10-05'},
+                    {Name: "Parmeet", age:50, salary:6500,DOB:'1989-12-12'}
+                ]
+
+                document.getElementById("result1").innerHTML=Employee.length.toString()+
+                " employees are there in the list. ";
+
+                var count=0;
+                for(var i=0;i<Employee.length;i++)
+                {
+                    if(Employee[i].salary<=2000 && Employee[i].age>20)
+                    {
+                        console.log("Employee Name:: "+Employee[i].Name+", Salary before increment::  "
+                        + Employee[i].salary);
+                        Employee[i].salary=5* Employee[i].salary;
+                        console.log("Employee Name:: "+Employee[i].Name+", Salary after increment::"+
+                        Employee[i].salary);
+                        count+=1;
+                    }
+                }
+                
+                
+                document.getElementById("result2").innerHTML=count+" salaries updated in the list"
+                +"<br>Check the console for the updated list";
+                console.log(Employee);
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,43 @@
+<html>
+    <head>
+	<title>Clone Object </title>
+    <link rel="stylesheet" href=css/style.css>
+    <style>
+        
+    </style>
+    </head>
+
+    <body>
+        <h1> Clone Object </h1>
+        <div class="submit-button-div">
+            <button class="btn" onclick="createCloneObject()"> Create Clone Object..</button>
+        </div>
+            <p id="result1"></p>
+            <p id="result2"></p> <p id="result3"></p>
+        </div>
+        <script>
+            function createCloneObject()
+            {
+                const person1={
+                    fullname:"akanksha",
+                    age: 24,
+                    city: "delhi",
+                    phone: 1122
+                };
+                document.getElementById("result1").innerHTML = 
+                "Object-name: person1"+"<br>Fullname: "+person1.fullname + " <br>Age: " + 
+                person1.age + "<br>City: " + person1.city 
+                + "<br>Phone:"+ person1.phone;
+
+                document.getElementById("result2").innerHTML="cloning this object";
+
+                const clonePerson1=Object.assign({},person1);
+
+                document.getElementById("result3").innerHTML = 
+                "Object-name: clonePerson1"+"<br>Fullname: "+clonePerson1.fullname +
+                " <br>Age: " + clonePerson1.age + "<br>City: " + clonePerson1.city 
+                + "<br>Phone:"+ clonePerson1.phone;
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,26 @@
+<html>
+    <head>
+	<title>Area of Circle</title>
+    <link rel="stylesheet" href=css/style.css>
+    <style>
+        
+    </style>
+    </head>
+
+    <body>
+        <h1> Area of Circle</h1>
+        <div class="submit-button-div">
+            <button class="btn" onclick="calculateArea()"> Calculate the area of circle!</button>
+        </div>
+        <p id="result" style="border: 1px solid;"></p>
+        <script>
+            function calculateArea()
+            {
+                var radius=window.prompt("Enter the radius of the circle (in meters): ");
+                var area_result= (22 * radius * radius)/7;
+                window.confirm("The Area of the Circle: "+ area_result +" meters square");
+                document.getElementById("result").innerHTML=area_result;
+            }
+        </script>
+    </body>
+</html>
