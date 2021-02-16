@@ -1,2 +1,2 @@
 # akankshatyagi-practise
-master branch
+JAVA assignment-1
