@@ -1,0 +1,3 @@
+pdf iText repo urls
+1. https://repository.jboss.org/nexus/content/repositories/thirdparty-releases/
+2. https://mvnrepository.com/artifact/com.lowagie/itext/2.0.4

@@ -1,2 +1,3 @@
 # akankshatyagi-practise
-master branch
+Maven Branch 
+Maven-Project-Final/textFile.txt is for the urls.
