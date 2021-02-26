@@ -1,0 +1,4 @@
+// .idea and target files are ignored
+.idea/
+child-project-1/target/
+child-project-2/target/
