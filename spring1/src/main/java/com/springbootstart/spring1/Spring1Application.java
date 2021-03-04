@@ -11,9 +11,7 @@ public class Spring1Application {
 		System.out.println("--------------------------------------------------");
 		JourneyClass obj= context.getBean(JourneyClass.class);
 		obj.startJourney();
+		System.out.println("Default profile:\n"+context.getEnvironment().getDefaultProfiles());
 		System.out.println("--------------------------------------------------");
 	}
 }
-
-
-//System.out.println(context.getEnvironment().getProperty("obj.getAbc()"));
