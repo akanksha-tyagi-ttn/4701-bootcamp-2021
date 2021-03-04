@@ -1,2 +1,2 @@
-# akankshatyagi-practise
+# akankshatyagi-practice
 master branch
