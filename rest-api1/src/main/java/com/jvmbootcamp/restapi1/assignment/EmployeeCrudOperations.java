@@ -1,5 +1,4 @@
 package com.jvmbootcamp.restapi1.assignment;
-
 import org.springframework.stereotype.Component;
 import java.util.*;
 
@@ -48,11 +47,4 @@ public class EmployeeCrudOperations {
         return null;
     }
 
-    public Employee updateEmployee(Employee emp) {
-        if(listEmp.contains(emp)) {
-            listEmp.add(0,emp);
-            return emp;
-        }
-        return null;
-    }
 }

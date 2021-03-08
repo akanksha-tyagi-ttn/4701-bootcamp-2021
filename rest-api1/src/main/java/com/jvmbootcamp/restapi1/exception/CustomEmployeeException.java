@@ -1,5 +1,4 @@
 package com.jvmbootcamp.restapi1.exception;
-
 import com.jvmbootcamp.restapi1.assignment.EmployeeNotFoundException;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
@@ -12,8 +11,7 @@ import org.springframework.web.context.request.WebRequest;
 import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExceptionHandler;
 import java.util.Date;
 
-@ControllerAdvice
-@RestController
+@ControllerAdvice  @RestController
 public class CustomEmployeeException extends ResponseEntityExceptionHandler {
     @ExceptionHandler(Exception.class)
     public final ResponseEntity<Object> handleAllExceptions(Exception ex, WebRequest request) {
@@ -26,7 +24,7 @@ public class CustomEmployeeException extends ResponseEntityExceptionHandler {
     //employee not found exception
     @ExceptionHandler(EmployeeNotFoundException.class)
     public final ResponseEntity<Object> handleUserNotFoundException(EmployeeNotFoundException ex, WebRequest request) {
-        ExceptionResponse exceptionResponse = new ExceptionResponse(new Date(), ex.getMessage(),
+        ExceptionResponse exceptionResponse = new ExceptionResponse(new Date(), ex.getMessage()+"  not found",
                 request.getDescription(false));
         return new ResponseEntity(exceptionResponse, HttpStatus.NOT_FOUND);
     }

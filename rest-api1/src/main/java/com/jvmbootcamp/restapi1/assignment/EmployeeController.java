@@ -1,5 +1,4 @@
 package com.jvmbootcamp.restapi1.assignment;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -20,7 +19,7 @@ public class EmployeeController {
         return service.getAllEmployee();
     }
 
-    //  http://localhost:8080/retrieveEmployee/101
+    // url : http://localhost:8080/retrieveEmployee/101  (in GET)
     @GetMapping("/retrieveEmployee/{id}")
     public Employee getOneEmployeeMapper(@PathVariable int id) {
         Employee emp=service.getOneEmployee(id);
@@ -30,6 +29,7 @@ public class EmployeeController {
         return emp;
     }
 
+    // url :  http://localhost:8080/retrieveEmployee/101 (in DELETE)
     @DeleteMapping("/retrieveEmployee/{id}")
     public void deleteByIdEmployeeMapper(@PathVariable int id) {
         Employee emp=service.deleteById(id);
@@ -38,6 +38,7 @@ public class EmployeeController {
     }
 
     /*request coming from postman in the form of json file */
+    //  url : http://localhost:8080/retrieveEmployee (in POST)
     @PostMapping("/retrieveEmployee")
     public ResponseEntity<Object> addEmployeeMapper(@Valid @RequestBody Employee emp){
         Employee createdEmp=service.addEmployee(emp);
@@ -49,16 +50,18 @@ public class EmployeeController {
         return ResponseEntity.created(location).build();
     }
 
-    @PutMapping ("/retrieveEmployee")
-    public ResponseEntity<Object> updateEmployeeMapper(@Valid @RequestBody Employee emp){
-        Employee updatedEmp=service.updateEmployee(emp);
+    // url : http://localhost:8080/retrieveEmployee/101 (in PUT request)
+    @PutMapping ("/retrieveEmployee/{id}")
+    public ResponseEntity<Object> updateEmployeeByIdMapper(@PathVariable int id,
+                                                           @Valid @RequestBody Employee getEmp)
+    {
+        Employee updatedEmp=service.getOneEmployee(id);
         if(updatedEmp==null)
             throw new EmployeeNotFoundException("incorrect id!!");
-        URI location=ServletUriComponentsBuilder
-                .fromCurrentRequest()
-                .path("/{id}")
-                .buildAndExpand(updatedEmp.getId())
-                .toUri();
-        return ResponseEntity.created(location).build();
+
+        updatedEmp.setId(getEmp.getId()); // retrieving id from parameter emp
+        updatedEmp.setName(getEmp.getName()); // name from parameter emp
+        updatedEmp.setAge(getEmp.getAge()); // age from parameter emp
+        return ResponseEntity.ok(updatedEmp);
     }
 }

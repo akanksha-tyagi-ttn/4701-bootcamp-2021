@@ -1,5 +1,4 @@
 package com.jvmbootcamp.restapi1.assignment;
-
 import javax.validation.constraints.Size;
 
 public class Employee {
@@ -17,7 +16,6 @@ public class Employee {
     public Integer getId() {
         return id;
     }
-
     public void setId(Integer id) {
         this.id = id;
     }
@@ -25,7 +23,6 @@ public class Employee {
     public String getName() {
         return name;
     }
-
     public void setName(String name) {
         this.name = name;
     }
@@ -33,15 +30,13 @@ public class Employee {
     public Integer getAge() {
         return age;
     }
-
     public void setAge(Integer age) {
         this.age = age;
     }
 
     @Override
     public String toString() {
-        return "Employee{" +
-                "\nid=" + id +
+        return "Employee{" + "\nid=" + id +
                 ",\nname='" + name + '\'' +
                 ",\nage=" + age +
                 '}';
