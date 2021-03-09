@@ -18,7 +18,7 @@ public class RestApi1Application {
 	@Bean
 	public LocaleResolver localeResolver() {
 		AcceptHeaderLocaleResolver localeResolver=new AcceptHeaderLocaleResolver();
-		localeResolver.setDefaultLocale(Locale.US);
+		localeResolver.setDefaultLocale(Locale.ENGLISH);
 		return localeResolver;
 	}
 }

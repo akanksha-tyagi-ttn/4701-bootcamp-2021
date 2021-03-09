@@ -1,8 +1,10 @@
 package com.jvmbootcamp.restapi1.assignment;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.linkTo;
+import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.methodOn;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.hateoas.EntityModel;
+import org.springframework.hateoas.server.mvc.WebMvcLinkBuilder;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
@@ -23,15 +25,24 @@ public class EmployeeController {
         return service.getAllEmployee();
     }
 
+
     // url : http://localhost:8080/retrieveEmployee/101  (in GET)
     @ApiOperation(value="returns the details of a specific employee passed as a parameter..")
     @GetMapping("/retrieveEmployee/{id}")
-    public Employee getOneEmployeeMapper(@PathVariable int id) {
+    public EntityModel<Employee> getOneEmployeeMapper(@PathVariable int id) {
         Employee emp=service.getOneEmployee(id);
         if(emp==null)
             throw new EmployeeNotFoundException("id-"+ id);
+        EntityModel<Employee> resource = EntityModel.of(emp);
 
-        return emp;
+        WebMvcLinkBuilder linkTo =
+                linkTo(methodOn(this.getClass()).getAllEmpMapper());
+
+        resource.add(linkTo.withRel("all-users"));
+
+        //HATEOAS
+
+        return resource;
     }
 
     // url :  http://localhost:8080/retrieveEmployee/101 (in DELETE)
@@ -42,6 +53,7 @@ public class EmployeeController {
         if(emp==null)
             throw new EmployeeNotFoundException("id-"+ id);
     }
+
 
     /*request coming from postman in the form of json file */
     //  url : http://localhost:8080/retrieveEmployee (in POST)
