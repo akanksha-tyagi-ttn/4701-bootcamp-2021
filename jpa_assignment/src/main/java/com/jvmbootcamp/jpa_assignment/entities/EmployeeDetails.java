@@ -5,26 +5,26 @@ import javax.persistence.*;
 @Table(name="employee_details")
 public class EmployeeDetails {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name="id")
     private Integer id;
-    @Column(name = "name")
+    @Column(name="name")
     private String name;
-    @Column(name = "age")
+    @Column(name="age")
     private Integer age;
-    @Column(name = "location")
+    @Column(name="location")
     private String location;
 
     public Integer getId() {
         return id;
     }
-
     public void setId(Integer id) {
         this.id = id;
     }
+
     public String getName() {
         return name;
     }
-
     public void setName(String name) {
         this.name = name;
     }
@@ -32,7 +32,6 @@ public class EmployeeDetails {
     public String getLocation() {
         return location;
     }
-
     public void setLocation(String location) {
         this.location = location;
     }
@@ -40,7 +39,6 @@ public class EmployeeDetails {
     public Integer getAge() {
         return age;
     }
-
     public void setAge(Integer age) {
         this.age = age;
     }
