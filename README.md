@@ -1,2 +1,2 @@
 # akankshatyagi-practice
-master branch
+JPA hibernate part-2 branch
