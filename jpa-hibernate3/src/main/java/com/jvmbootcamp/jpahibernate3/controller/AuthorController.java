@@ -1,5 +1,4 @@
 package com.jvmbootcamp.jpahibernate3.controller;
-
 import com.jvmbootcamp.jpahibernate3.entities.Author;
 import com.jvmbootcamp.jpahibernate3.repos.AuthorRepository;
 import com.jvmbootcamp.jpahibernate3.services.AuthorService;
@@ -10,19 +9,22 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
+
 @RestController
 public class AuthorController {
     @Autowired
     AuthorService service;
 
     @GetMapping("/get-authors")
-    public List<Author> getAll() {
+    public String getAll() {
         return service.getAllAuthors();
     }
 
     @PostMapping("/create-author")
     public String create() {
-        service.createAuthor();
-        return "author created";
+        //service.createAuthorBook();
+        service.createAuthorBookOneToManyUnidirectional();
+        return "bidirectionally\n" +
+                "author with subjects and books created";
     }
 }

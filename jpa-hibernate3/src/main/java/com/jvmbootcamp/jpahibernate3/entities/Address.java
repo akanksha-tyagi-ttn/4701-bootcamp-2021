@@ -22,4 +22,13 @@ public class Address {
     public void setState(String state) {
         this.state = state;
     }
+
+    @Override
+    public String toString() {
+        return "\nAddress{" +
+                "streetNumber='" + streetNumber + '\'' +
+                ",location='" + location + '\'' +
+                ",state='" + state + '\'' +
+                '}';
+    }
 }
