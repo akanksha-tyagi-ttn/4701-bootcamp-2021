@@ -20,8 +20,15 @@ public class Author {
 //    @JoinColumn(name="author_id") // foreign key in book table
 //    private List<Book> bookList;
 
-    //one to many directional
-    @OneToMany(mappedBy = "author",cascade = CascadeType.ALL)
+      //one to many bidirectional
+//    @OneToMany(mappedBy = "author",cascade = CascadeType.ALL)
+//    private List<Book> bookList;
+
+    //many to many
+    @ManyToMany(cascade = CascadeType.ALL)
+    @JoinTable(name="author_book",
+            joinColumns = @JoinColumn(name="author_ref", referencedColumnName = "id"),
+            inverseJoinColumns = @JoinColumn(name="book_ref", referencedColumnName = "bookId"))
     private List<Book> bookList;
 
     public List<Book> getBookList() {

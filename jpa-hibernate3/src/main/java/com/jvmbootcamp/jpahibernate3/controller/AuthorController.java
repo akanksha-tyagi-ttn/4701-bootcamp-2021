@@ -15,6 +15,13 @@ public class AuthorController {
     @Autowired
     AuthorService service;
 
+    @GetMapping("/cachingexample")
+    public void caching()
+    {
+        service.removeCacheCheck();
+       //service.cacheCheck();
+    }
+
     @GetMapping("/get-authors")
     public String getAll() {
         return service.getAllAuthors();
@@ -23,8 +30,9 @@ public class AuthorController {
     @PostMapping("/create-author")
     public String create() {
         //service.createAuthorBook();
-        service.createAuthorBookOneToManyUnidirectional();
-        return "bidirectionally\n" +
+        //service.createAuthorBookOneToManyBidirectional();
+        service.createAuthorBookManyToMany();
+        return "Many to Many\n" +
                 "author with subjects and books created";
     }
 }
